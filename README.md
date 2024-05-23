@@ -80,63 +80,50 @@ Ensure you have the following installed:
 <p> > CREATE DATABASE medusa_ecommerce;</p>
 <p> > DATABASE_URL=postgres://your-username:your-password@localhost:5432/medusa_ecommerce</p>
 
-4. Configure TypeORM and Medusa
+<h3>4. Configure TypeORM and Medusa</h3>
 > Configure TypeORM for the custom backend and Medusa for the Medusa server.
+
+<p> > Custom Backend Configuration: Edit the src/config/ormconfig.ts file in the custom backend directory to set your PostgreSQL database credentials.</p>
+<p> > Medusa Server Configuration: Edit the medusa-config.js file in the medusa-server directory to set your PostgreSQL database credentials.</p>
+
+<h3>5. Run Migrations (if necessary)</h3>
+<p> > Run migrations to set up the database schema. This may be handled automatically by TypeORM and Medusa based on the configuration.</p>
+
+<h3>6. Start the Servers</h3>
+<p> > Start both the custom backend and the Medusa server.</p>
+<p> > npx ts-node src/index.ts</p>
+<p> > Start the Medusa server</p>
+<p> > "medusa develop"
+
+<h3>7. Access the Application</h3>
+<p> >  Custom Backend API: The custom backend server will be running at http://localhost:3000.</p>
+<p> > Medusa Admin Panel: Access the Medusa admin panel at http://localhost:7000 or http://localhost:7001.</p>
+
+<h3>9. Testing API Endpoints</h3>
+<p> > Use Postman or cURL to test the API endpoints provided by the custom backend.</p>
+<p>The API endpoints include:</p>
+<ul>
+<li> Get all products: GET http://localhost:3000/products</li>
+<li> Get a product by ID: GET http://localhost:3000/products/{id}</li>
+<li> Create a new product: POST http://localhost:3000/products
 <br/>
-> Custom Backend Configuration: Edit the src/config/ormconfig.ts file in the custom backend directory to set your PostgreSQL database credentials.
-<br/>
-> Medusa Server Configuration: Edit the medusa-config.js file in the medusa-server directory to set your PostgreSQL database credentials.
-<br/>
-5. Run Migrations (if necessary)
-<br/>
-> Run migrations to set up the database schema. This may be handled automatically by TypeORM and Medusa based on the configuration.
-<br/>
-6. Start the Servers
-<br/>
-> Start both the custom backend and the Medusa server.
-<br/>
-> npx ts-node src/index.ts
-<br/>
-> Start the Medusa server
-<br/>
-> medusa develop
-<br/>
-7. Access the Application
-<br/>
-> Custom Backend API: The custom backend server will be running at http://localhost:3000.
-<br/>
-> Medusa Admin Panel: Access the Medusa admin panel at http://localhost:7000 or http://localhost:7001.
-<br/>
-9. Testing API Endpoints
-<br/>
-Use Postman or cURL to test the API endpoints provided by the custom backend.
-<br/>
-The API endpoints include:
-<br/>
-> Get all products: GET http://localhost:3000/products
-<br/>
-> Get a product by ID: GET http://localhost:3000/products/{id}
-<br/>
-> Create a new product: POST http://localhost:3000/products
-<br/>
-Body (JSON):
+  Body (JSON):
 {
   "name": "Product Name",
   "description": "Product Description",
   "price": 40.69,
   "inventory": 100
-}
-<br/>
-> Update a product: PUT http://localhost:3000/products/{id}
-<br/>
+}</li>
+<li> Update a product: PUT http://localhost:3000/products/{id}
+  <br/>
 Body (JSON):
 {
   "name": "Updated Product Name",
   "description": "Updated Product Description",
   "price": 20,
   "inventory": 50
-}
-<br/>
-> Delete a product: DELETE http://localhost:3000/products/{id}
-<br/>
-By following these steps, you should be able to set up and run the Medusa E-commerce Backend project on your local system. If you encounter any issues, please feel free to contact me through my email "kaina.tarar@gmail.com".
+}</li>
+<li> Delete a product: DELETE http://localhost:3000/products/{id}</li>
+</ul>
+
+<p>By following these steps, you should be able to set up and run the Medusa E-commerce Backend project on your local system. If you encounter any issues, please feel free to contact me through my email "kaina.tarar@gmail.com".</p>

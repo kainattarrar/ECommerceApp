@@ -61,13 +61,13 @@ Ensure you have the following installed:
 <br/>
 
 # Steps to Set Up and Run the Project
-1. Clone the Repository
+<h1>1. Clone the Repository</h1>
 <br/>
 Clone the project repository from GitHub to your local machine.
 <br/>
 > git clone https://github.com/kainattarar/ECommerceApp.git
 
-2. Install Dependencies
+<h1>2. Install Dependencies</h1>
 <br/>
 Install the required dependencies for both the custom backend and the Medusa server.
 <br/>

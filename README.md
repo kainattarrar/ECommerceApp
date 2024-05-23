@@ -12,59 +12,117 @@
 </h1>
 
 <h4 align="center">
-  <a href="https://docs.medusajs.com">Documentation</a> |
-  <a href="https://www.medusajs.com">Website</a>
+Medusa ECommerce App
 </h4>
 
-<p align="center">
-  Building blocks for digital commerce
-</p>
-<p align="center">
-  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
-  </a>
-    <a href="https://www.producthunt.com/posts/medusa"><img src="https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Day-%23DA552E" alt="Product Hunt"></a>
-  <a href="https://discord.gg/xpCwq3Kfn8">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
-    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
-  </a>
-</p>
+This project is a backend application for an e-commerce platform, built using TypeScript, PostgreSQL, TypeORM, and Express. It follows the Model-View-Controller (MVC) architecture pattern. Below are the methodologies and technologies used in this project and their roles.
 
-## Compatibility
+##Project Structure
+Models: Defined using TypeORM decorators, models represent the database schema and are used to interact with the database.
+Services: Service classes contain the business logic and interact with the models to perform database operations.
+Controllers: Controllers define the API endpoints and use services to process requests and send responses.
+Configuration: TypeORM configuration file (ormconfig.ts) initializes the database connection and sets up the data source.
 
-This starter is compatible with versions >= 1.8.0 of `@medusajs/medusa`. 
+##Summary of Key Components
+##Database Configuration
+A PostgreSQL database is set up to store product information. TypeORM configuration is used to establish a connection to the database and manage the schema.
 
-## Getting Started
+##Configuration
+The Medusa server is configured to connect to the PostgreSQL database used for the e-commerce platform. This involves setting up the database connection parameters in the medusa-config.js file.
 
-Visit the [Quickstart Guide](https://docs.medusajs.com/create-medusa-app) to set up a server.
+##TypeORM Entities and Repositories
+Entities are defined as TypeScript classes with TypeORM decorators, representing tables in the database. Repositories are used to perform CRUD operations on these entities.
 
-Visit the [Docs](https://docs.medusajs.com/development/backend/prepare-environment) to learn more about our system requirements.
+##API Endpoints
+Express routes are set up to handle HTTP requests for product operations (e.g., retrieving, creating, updating, deleting products). Controllers process these requests and utilize services to interact with the database.
 
-## What is Medusa
+##Service Layer
+The service layer contains the core business logic. It uses TypeORM repositories to perform database operations and provides methods for controllers to use.
 
-Medusa is a set of commerce modules and tools that allow you to build rich, reliable, and performant commerce applications without reinventing core commerce logic. The modules can be customized and used to build advanced ecommerce stores, marketplaces, or any product that needs foundational commerce primitives. All modules are open-source and freely available on npm.
+##Version Control
+Git is used for version control, ensuring that the development process is tracked, and changes are documented. Commits are made at logical stages to reflect the progress and evolution of the project.
 
-Learn more about [Medusa’s architecture](https://docs.medusajs.com/development/fundamentals/architecture-overview) and [commerce modules](https://docs.medusajs.com/modules/overview) in the Docs.
+<h4>
+Installation and Running Guide
+</h4>
+This guide provides step-by-step instructions to set up and run the Medusa E-commerce Backend project on your local system.
 
-## Roadmap, Upgrades & Plugins
+##Prerequisites
+Ensure you have the following installed:
 
-You can view the planned, started and completed features in the [Roadmap discussion](https://github.com/medusajs/medusa/discussions/categories/roadmap).
+Node.js (>= 14.x)
+npm (>= 6.x)
+PostgreSQL (>= 12.x)
+Git
 
-Follow the [Upgrade Guides](https://docs.medusajs.com/upgrade-guides/) to keep your Medusa project up-to-date.
+##Steps to Set Up and Run the Project
+1. Clone the Repository
+Clone the project repository from GitHub to your local machine.
 
-Check out all [available Medusa plugins](https://medusajs.com/plugins/).
+git clone https://github.com/kainattarar/ECommerceApp.git
 
-## Community & Contributions
+2. Install Dependencies
+Install the required dependencies for both the custom backend and the Medusa server.
 
-The community and core team are available in [GitHub Discussions](https://github.com/medusajs/medusa/discussions), where you can ask for support, discuss roadmap, and share ideas.
+# Install TypeScript and other dependencies
+npm install
 
-Join our [Discord server](https://discord.com/invite/medusajs) to meet other community members.
+# Navigate to the Medusa server directory
+cd ../medusa-server
 
-## Other channels
+# Install Medusa dependencies
+npm install
 
-- [GitHub Issues](https://github.com/medusajs/medusa/issues)
-- [Twitter](https://twitter.com/medusajs)
-- [LinkedIn](https://www.linkedin.com/company/medusajs)
-- [Medusa Blog](https://medusajs.com/blog/)
+3. Configure PostgreSQL Database
+Set up PostgreSQL and create the necessary database.
+Start PostgreSQL server and connect to it.
+Create a new database for the project (medusa_ecommerce).
+
+CREATE DATABASE medusa_ecommerce;
+DATABASE_URL=postgres://your-username:your-password@localhost:5432/medusa_ecommerce
+
+4. Configure TypeORM and Medusa
+Configure TypeORM for the custom backend and Medusa for the Medusa server.
+Custom Backend Configuration: Edit the src/config/ormconfig.ts file in the custom backend directory to set your PostgreSQL database credentials.
+Medusa Server Configuration: Edit the medusa-config.js file in the medusa-server directory to set your PostgreSQL database credentials.
+
+5. Run Migrations (if necessary)
+Run migrations to set up the database schema. This may be handled automatically by TypeORM and Medusa based on the configuration.
+
+6. Start the Servers
+Start both the custom backend and the Medusa server.
+
+npx ts-node src/index.ts
+
+# Start the Medusa server
+medusa develop
+
+7. Access the Application
+Custom Backend API: The custom backend server will be running at http://localhost:3000.
+Medusa Admin Panel: Access the Medusa admin panel at http://localhost:7000 or http://localhost:7001.
+
+9. Testing API Endpoints
+Use Postman or cURL to test the API endpoints provided by the custom backend.
+The API endpoints include:
+
+Get all products: GET http://localhost:3000/products
+Get a product by ID: GET http://localhost:3000/products/{id}
+Create a new product: POST http://localhost:3000/products
+Body (JSON):
+{
+  "name": "Product Name",
+  "description": "Product Description",
+  "price": 40.69,
+  "inventory": 100
+}
+Update a product: PUT http://localhost:3000/products/{id}
+Body (JSON):
+{
+  "name": "Updated Product Name",
+  "description": "Updated Product Description",
+  "price": 20,
+  "inventory": 50
+}
+Delete a product: DELETE http://localhost:3000/products/{id}
+
+By following these steps, you should be able to set up and run the Medusa E-commerce Backend project on your local system. If you encounter any issues, please feel free to contact me through my email "kaina.tarar@gmail.com".

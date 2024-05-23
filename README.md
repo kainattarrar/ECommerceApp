@@ -57,14 +57,12 @@ Ensure you have the following installed:
 <li>PostgreSQL (>= 12.x)</li>
 <li>Git</li>
 </ul>
-<h4> Steps to Set Up and Run the Project</h4>
-<h1>1. Clone the Repository</h1>
-<br/>
-Clone the project repository from GitHub to your local machine.
-<br/>
+<h1> Steps to Set Up and Run the Project</h1>
+<h4>1. Clone the Repository</h4>
+<p>Clone the project repository from GitHub to your local machine.</p>
 > git clone https://github.com/kainattarar/ECommerceApp.git
 
-<h1>2. Install Dependencies</h1>
+<h4>2. Install Dependencies</h4>
 <p>Install the required dependencies for both the custom backend and the Medusa server.</p>
 <p>Install TypeScript and other dependencies</p>
 > npm install
@@ -75,16 +73,11 @@ Clone the project repository from GitHub to your local machine.
 <p>Install Medusa dependencies</p>
 > npm install
 
-3. Configure PostgreSQL Database
-<br/>
+<h4>3. Configure PostgreSQL Database</h4>
 > Set up PostgreSQL and create the necessary database.
-<br/>
 > Start PostgreSQL server and connect to it.
-<br/>
 > Create a new database for the project (medusa_ecommerce).
-<br/>
 > CREATE DATABASE medusa_ecommerce;
-<br/>
 > DATABASE_URL=postgres://your-username:your-password@localhost:5432/medusa_ecommerce
 
 4. Configure TypeORM and Medusa

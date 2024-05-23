@@ -53,7 +53,7 @@ Ensure you have the following installed:
 
 <ul>
 <li>Node.js (>= 14.x)</li>
-<li></li>npm (>= 6.x)</li>
+<li>npm (>= 6.x)</li>
 <li>PostgreSQL (>= 12.x)</li>
 <li>Git</li>
 </ul>

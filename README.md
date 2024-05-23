@@ -51,15 +51,12 @@ This guide provides step-by-step instructions to set up and run the Medusa E-com
 > Prerequisites
 Ensure you have the following installed:
 
--> Node.js (>= 14.x)
-<br/>
--> npm (>= 6.x)
-<br/>
--> PostgreSQL (>= 12.x)
-<br/>
--> Git
-<br/>
-
+<ul>
+<li>Node.js (>= 14.x)</li>
+<li></li>npm (>= 6.x)</li>
+<li>PostgreSQL (>= 12.x)</li>
+<li>Git</li>
+</ul>
 # Steps to Set Up and Run the Project
 <h1>1. Clone the Repository</h1>
 <br/>

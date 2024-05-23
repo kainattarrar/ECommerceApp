@@ -52,6 +52,7 @@ This guide provides step-by-step instructions to set up and run the Medusa E-com
 Ensure you have the following installed:
 
 -> Node.js (>= 14.x)
+<br/>
 -> npm (>= 6.x)
 -> PostgreSQL (>= 12.x)
 -> Git

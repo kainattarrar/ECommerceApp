@@ -33,6 +33,16 @@ const DATABASE_URL =
 
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
+const config = {
+  projectConfig: {
+    database_url: process.env.DATABASE_URL || "postgres://postgres:password@localhost:5432/medusa_ecommerce",
+    database_type: "postgres",
+  },
+  plugins: [
+    // other plugins
+  ],
+}
+
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
@@ -85,4 +95,5 @@ module.exports = {
   projectConfig,
   plugins,
   modules,
+  config
 };

@@ -48,8 +48,7 @@ Installation and Running Guide
 </h4>
 This guide provides step-by-step instructions to set up and run the Medusa E-commerce Backend project on your local system.
 
-> Prerequisites
-Ensure you have the following installed:
+> Prerequisites:
 
 <ul>
 <li>Node.js (>= 14.x)</li>
@@ -60,25 +59,22 @@ Ensure you have the following installed:
 <h1> Steps to Set Up and Run the Project</h1>
 <h3>1. Clone the Repository</h3>
 <p>Clone the project repository from GitHub to your local machine.</p>
-> git clone https://github.com/kainattarar/ECommerceApp.git
+> "git clone https://github.com/kainattarar/ECommerceApp.git"
 
 <h3>2. Install Dependencies</h3>
 <p>Install the required dependencies for both the custom backend and the Medusa server.</p>
 <p>Install TypeScript and other dependencies</p>
-> npm install
-
+> "npm install"
 <p>Navigate to the Medusa server directory</p>
-> cd ../medusa-server
-
+> "cd ../medusa-server"
 <p>Install Medusa dependencies</p>
-> npm install
+> "npm install"
 
 <h3>3. Configure PostgreSQL Database</h3>
 <p> > Set up PostgreSQL and create the necessary database.</p>
 <p> > Start PostgreSQL server and connect to it.</p>
 <p> > Create a new database for the project (medusa_ecommerce).</p>
-<p> > CREATE DATABASE medusa_ecommerce;</p>
-<p> > DATABASE_URL=postgres://your-username:your-password@localhost:5432/medusa_ecommerce</p>
+<p> > "CREATE DATABASE medusa_ecommerce;"</p>
 
 <h3>4. Configure TypeORM and Medusa</h3>
 > Configure TypeORM for the custom backend and Medusa for the Medusa server.
@@ -91,7 +87,7 @@ Ensure you have the following installed:
 
 <h3>6. Start the Servers</h3>
 <p> > Start both the custom backend and the Medusa server.</p>
-<p> > npx ts-node src/index.ts</p>
+<p> > "npx ts-node src/index.ts"</p>
 <p> > Start the Medusa server</p>
 <p> > "medusa develop"
 

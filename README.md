@@ -33,7 +33,18 @@ The Medusa server is configured to connect to the PostgreSQL database used for t
 
 <h2>TypeORM Entities and Repositories</h2>
 Entities are defined as TypeScript classes with TypeORM decorators, representing tables in the database. Repositories are used to perform CRUD operations on these entities.
+In the context of our e-commerce application, the chosen ORM (Object-Relational Mapping) library, TypeORM, simplifies database interactions in several ways:
+<ul>
+<li>Abstraction of SQL Queries: We can work with TypeScript/JavaScript classes and methods, which are more easier to understand. This abstraction reduces the complexity of database interactions.</li>
 
+<li>Entity-Relationship Mapping: TypeORM provides an easier way to define entities and their relationships using TypeScript decorators. This mapping between entities and database tables eliminates the need to manually manage SQL table creation and schema changes.</li>
+
+<li>CRUD Operations: TypeORM simplifies CRUD operations by providing methods for performing these operations on entities. We can use methods like save, findOne, update, and remove to interact with database records, without writing complex SQL statements.</li>
+
+<li>Type Safety: TypeORM offers type safety, which helps catch errors at compile time rather than runtime. This feature ensures that developers work with the correct data types and avoid common mistake such as typos in column names or mismatched data types.</li>
+
+<li>Migration Support: TypeORM includes migration support, allowing us to manage database schema changes over time. With migration files, we can make changes to the database schema in a controlled manner, ensuring that the database remains consistent across different environments and versions of the application.</li>
+</ul>
 <h2>API Endpoints</h2>
 Express routes are set up to handle HTTP requests for product operations (e.g., retrieving, creating, updating, deleting products). Controllers process these requests and utilize services to interact with the database.
 

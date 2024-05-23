@@ -17,29 +17,30 @@ Medusa ECommerce App
 
 This project is a backend application for an e-commerce platform, built using TypeScript, PostgreSQL, TypeORM, and Express. It follows the Model-View-Controller (MVC) architecture pattern. Below are the methodologies and technologies used in this project and their roles.
 
-#Project Structure
+# Project Structure
+
 Models: Defined using TypeORM decorators, models represent the database schema and are used to interact with the database.
 Services: Service classes contain the business logic and interact with the models to perform database operations.
 Controllers: Controllers define the API endpoints and use services to process requests and send responses.
 Configuration: TypeORM configuration file (ormconfig.ts) initializes the database connection and sets up the data source.
 
-#Summary of Key Components
-#Database Configuration
+# Summary of Key Components
+<h2>Database Configuration</h2>
 A PostgreSQL database is set up to store product information. TypeORM configuration is used to establish a connection to the database and manage the schema.
 
-#Configuration
+<h2>Configuration</h2>
 The Medusa server is configured to connect to the PostgreSQL database used for the e-commerce platform. This involves setting up the database connection parameters in the medusa-config.js file.
 
-#TypeORM Entities and Repositories
+<h2>TypeORM Entities and Repositories</h2>
 Entities are defined as TypeScript classes with TypeORM decorators, representing tables in the database. Repositories are used to perform CRUD operations on these entities.
 
-#API Endpoints
+<h2>API Endpoints</h2>
 Express routes are set up to handle HTTP requests for product operations (e.g., retrieving, creating, updating, deleting products). Controllers process these requests and utilize services to interact with the database.
 
-#Service Layer
+<h2>Service Layer</h2>
 The service layer contains the core business logic. It uses TypeORM repositories to perform database operations and provides methods for controllers to use.
 
-#Version Control
+<h2>Version Control</h2>
 Git is used for version control, ensuring that the development process is tracked, and changes are documented. Commits are made at logical stages to reflect the progress and evolution of the project.
 
 <h4>
